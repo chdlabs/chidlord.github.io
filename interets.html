@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centre d'intérêts - Loïc CHID'LORD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .interest-card {
+      position: relative;
+      border-radius: 25px;
+      padding: 2.5rem;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    
+    .interest-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
+      z-index: 0;
+      transition: opacity 0.4s ease;
+    }
+    
+    .interest-card:hover::before {
+      opacity: 0.5;
+    }
+    
+    .interest-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    
+    .interest-content {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .emoji-container {
+      font-size: 5rem;
+      margin-bottom: 1.5rem;
+      transition: transform 0.4s ease;
+      display: inline-block;
+    }
+    
+    .interest-card:hover .emoji-container {
+      transform: scale(1.15) rotate(5deg);
+    }
+    
+    .stats-badge {
+      display: inline-block;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-top: 1rem;
+      backdrop-filter: blur(10px);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.8; }
+    }
+    
+    .masonry-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    
+    .hero-section {
+      position: relative;
+      padding: 3rem;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      margin-bottom: 4rem;
+      overflow: hidden;
+    }
+    
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+    
+    .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+    
+    .stat-item:hover {
+      transform: translateX(10px);
+    }
+    
+    .stat-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html" class="logo">
+      <img src="photo.jpg" alt="Loïc CHID'LORD" class="logo-photo">
+      <span style="color: #1a1a1a;">Loïc</span>
+      <span style="color: #2196F3;">CHID'LORD</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="competences.html">Compétences</a></li>
+      <li><a href="projets.html">Projets</a></li>
+      <li><a href="experience.html">Expérience</a></li>
+      <li><a href="interets.html">Centre d'intérêts</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main style="padding-top: 8rem;">
+    <section class="content-section">
+      <!-- Stats rapides -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 4rem;">
+        <div class="stat-item">
+          <div class="stat-icon" style="background: linear-gradient(135deg, #FFC107, #FF9800);">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12,2C6.48,2 2,6.48 2,12C2,17.52 6.48,22 12,22C17.52,22 22,17.52 22,12C22,6.48 17.52,2 12,2M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6M12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16Z"/>
+            </svg>
+          </div>
+          <div>
+            <div style="font-size: 1.5rem; font-weight: 700; color: #1a1a1a;">3 ans</div>
+            <div style="color: #666; font-size: 0.9rem;">de Judo</div>
+          </div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon" style="background: linear-gradient(135deg, #2196F3, #03A9F4);">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.6,16.6L19.2,12L14.6,7.4L16,6L22,12L16,18L14.6,16.6M9.4,16.6L4.8,12L9.4,7.4L8,6L2,12L8,18L9.4,16.6Z"/>
+            </svg>
+          </div>
+          <div>
+            <div style="font-size: 1.5rem; font-weight: 700; color: #1a1a1a;">10+ projets</div>
+            <div style="color: #666; font-size: 0.9rem;">développés</div>
+          </div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon" style="background: linear-gradient(135deg, #9C27B0, #7B1FA2);">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12,3V12.26C11.5,12.09 11,12 10.5,12C8,12 6,14 6,16.5C6,19 8,21 10.5,21C13,21 15,19 15,16.5V6H19V3H12Z"/>
+            </svg>
+          </div>
+          <div>
+            <div style="font-size: 1.5rem; font-weight: 700; color: #1a1a1a;">24/7</div>
+            <div style="color: #666; font-size: 0.9rem;">en musique</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cartes d'intérêts améliorées -->
+      <div class="masonry-grid">
+        <div class="interest-card" style="background: linear-gradient(135deg, #FFF3E0, #FFE0B2); border: 2px solid #FFC107;">
+          <div class="interest-content">
+            <div class="emoji-container">
+              <img src="belt.png" alt="Judo Belt" style="width: 80px; height: 80px; object-fit: contain;">
+            </div>
+            <h3 style="color: #F57C00; font-size: 1.6rem; margin-bottom: 0.8rem; font-weight: 700;">Judo</h3>
+            <p style="font-weight: 600; color: #E65100; margin-bottom: 0.8rem; font-size: 1.05rem;">Club de Noisy-le-Grand</p>
+            <p style="color: #5D4037; line-height: 1.8; margin-bottom: 1rem;">
+              Sur le tatami comme en IT : discipline, persévérance et stratégie ! 
+              Le judo m'a appris que chaque problème a sa prise... euh, sa solution !
+            </p>
+            <div class="stats-badge" style="background: rgba(255, 193, 7, 0.3); color: #F57C00;">
+              Pratique régulière • Compétitions
+            </div>
+          </div>
+        </div>
+        
+        <div class="interest-card" style="background: linear-gradient(135deg, #E3F2FD, #BBDEFB); border: 2px solid #2196F3;">
+          <div class="interest-content">
+            <div class="emoji-container">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="#1565C0" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.6,16.6L19.2,12L14.6,7.4L16,6L22,12L16,18L14.6,16.6M9.4,16.6L4.8,12L9.4,7.4L8,6L2,12L8,18L9.4,16.6Z"/>
+              </svg>
+            </div>
+            <h3 style="color: #1565C0; font-size: 1.6rem; margin-bottom: 0.8rem; font-weight: 700;">Développement</h3>
+            <p style="font-weight: 600; color: #0D47A1; margin-bottom: 0.8rem; font-size: 1.05rem;">Mobile & Web</p>
+            <p style="color: #1565C0; line-height: 1.8; margin-bottom: 1rem;">
+              De l'idée au déploiement, j'adore créer des applications qui font la différence. 
+              Mon terrain de jeu préféré ? Swift ! Mais j'aime aussi explorer React.
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
+              <span style="background: rgba(33, 150, 243, 0.2); color: #1565C0; padding: 0.4rem 0.8rem; border-radius: 15px; font-size: 0.85rem; font-weight: 600;">React Native</span>
+              <span style="background: rgba(33, 150, 243, 0.2); color: #1565C0; padding: 0.4rem 0.8rem; border-radius: 15px; font-size: 0.85rem; font-weight: 600;">Swift</span>
+              <span style="background: rgba(33, 150, 243, 0.2); color: #1565C0; padding: 0.4rem 0.8rem; border-radius: 15px; font-size: 0.85rem; font-weight: 600;">Flutter</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="interest-card" style="background: linear-gradient(135deg, #F3E5F5, #E1BEE7); border: 2px solid #9C27B0;">
+          <div class="interest-content">
+            <div class="emoji-container">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="#6A1B9A" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12,3V12.26C11.5,12.09 11,12 10.5,12C8,12 6,14 6,16.5C6,19 8,21 10.5,21C13,21 15,19 15,16.5V6H19V3H12Z"/>
+              </svg>
+            </div>
+            <h3 style="color: #6A1B9A; font-size: 1.6rem; margin-bottom: 0.8rem; font-weight: 700;">Musique</h3>
+            <p style="font-weight: 600; color: #4A148C; margin-bottom: 0.8rem; font-size: 1.05rem;">Tous les styles, toutes les vibes</p>
+            <p style="color: #6A1B9A; line-height: 1.8; margin-bottom: 1rem;">
+              Du hip-hop au classique, ma playlist est aussi variée que mes stacks techniques ! 
+              Un bon casque, une bonne playlist = productivité maximale. 
+              À mes heures perdues, je chante aussi dans mon home studio.
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
+              <span style="background: rgba(156, 39, 176, 0.2); color: #6A1B9A; padding: 0.4rem 0.8rem; border-radius: 15px; font-size: 0.85rem; font-weight: 600;">Hip-Hop</span>
+              <span style="background: rgba(156, 39, 176, 0.2); color: #6A1B9A; padding: 0.4rem 0.8rem; border-radius: 15px; font-size: 0.85rem; font-weight: 600;">R&B</span>
+              <span style="background: rgba(156, 39, 176, 0.2); color: #6A1B9A; padding: 0.4rem 0.8rem; border-radius: 15px; font-size: 0.85rem; font-weight: 600;">Jazz</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Citation inspirante -->
+      <div style="text-align: center; margin-top: 4rem; padding: 3rem; background: linear-gradient(135deg, rgba(103, 58, 183, 0.1), rgba(33, 150, 243, 0.1)); border-radius: 25px; border: 2px solid rgba(103, 58, 183, 0.2); position: relative; overflow: hidden;">
+        <div style="position: absolute; top: 20px; left: 30px; font-size: 4rem; opacity: 0.1;">
+          <svg width="60" height="60" viewBox="0 0 24 24" fill="#673AB7" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"/>
+          </svg>
+        </div>
+        <div style="position: absolute; bottom: 20px; right: 30px; font-size: 4rem; opacity: 0.1;">
+          <svg width="60" height="60" viewBox="0 0 24 24" fill="#673AB7" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"/>
+          </svg>
+        </div>
+        <p style="font-size: 1.4rem; color: #1a1a1a; line-height: 1.8; font-style: italic; position: relative; z-index: 1;">
+          "La passion est l'énergie qui transforme l'ordinaire en extraordinaire"
+        </p>
+        <p style="margin-top: 1rem; color: #666; font-size: 1rem;">
+          <strong>Fun fact :</strong> J'ai plus de projets en cours que de commits pushés... 
+          oui, je suis ce genre de développeur !
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

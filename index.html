@@ -1,1 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loïc CHID'LORD - Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
+  <!-- Navigation -->
+  <nav>
+    <a href="#" class="logo">
+      <img src="photo.jpg" alt="Loïc CHID'LORD" class="logo-photo">
+      <span style="color: #1a1a1a;">Loïc</span>
+      <span style="color: #2196F3;">CHID'LORD</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="competences.html">Compétences</a></li>
+      <li><a href="projets.html">Projets</a></li>
+      <li><a href="experience.html">Expérience</a></li>
+      <li><a href="interets.html">Centre d'intérêts</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="accueil" style="position: relative;">
+    <div class="hero-content">
+      <h1>
+        <span class="name-first">Loïc</span>
+        <span class="name-last">CHID'LORD</span>
+      </h1>
+      <div class="hero-badge">ADMINISTRATEUR SYSTÈMES & RÉSEAUX</div>
+    </div>
+    <div class="hero-icons">
+      <!-- Judo -->
+      <div class="icon-card">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6,7H18C18.55,7 19,7.45 19,8C19,8.55 18.55,9 18,9H6C5.45,9 5,8.55 5,8C5,7.45 5.45,7 6,7M6,11H18C18.55,11 19,11.45 19,12C19,12.55 18.55,13 18,13H6C5.45,13 5,12.55 5,12C5,11.45 5.45,11 6,11M6,15H18C18.55,15 19,15.45 19,16C19,16.55 18.55,17 18,17H6C5.45,17 5,16.55 5,16C5,15.45 5.45,15 6,15M2,8A2,2 0 0,1 4,6H5V18H4A2,2 0 0,1 2,16V8M22,16A2,2 0 0,1 20,18H19V6H20A2,2 0 0,1 22,8V16Z"/>
+        </svg>
+        <span>Judo</span>
+      </div>
+      
+      <!-- Dev Mobile & Web -->
+      <div class="icon-card">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9.4,16.6L4.8,12L9.4,7.4L8,6L2,12L8,18L9.4,16.6M14.6,16.6L19.2,12L14.6,7.4L16,6L22,12L16,18L14.6,16.6Z"/>
+        </svg>
+        <span>Dev Mobile & Web</span>
+      </div>
+      
+      <!-- Réseau & Télécom -->
+      <div class="icon-card">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4,1C2.89,1 2,1.89 2,3V7C2,8.11 2.89,9 4,9H1V11H13V9H10C11.11,9 12,8.11 12,7V3C12,1.89 11.11,1 10,1H4M4,3H10V7H4V3M14,13C12.89,13 12,13.89 12,15V19C12,20.11 12.89,21 14,21H11V23H23V21H20C21.11,21 22,20.11 22,19V15C22,13.89 21.11,13 20,13H14M3.88,13.46L2.46,14.88L4.59,17L2.46,19.12L3.88,20.54L6,18.41L8.12,20.54L9.54,19.12L7.41,17L9.54,14.88L8.12,13.46L6,15.59L3.88,13.46M14,15H20V19H14V15Z"/>
+        </svg>
+        <span>Réseau & Télécom</span>
+      </div>
+      
+      <!-- Musique -->
+      <div class="icon-card">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12,3V12.26C11.5,12.09 11,12 10.5,12C8,12 6,14 6,16.5C6,19 8,21 10.5,21C13,21 15,19 15,16.5V6H19V3H12M10.5,19C9.12,19 8,17.88 8,16.5C8,15.12 9.12,14 10.5,14C11.88,14 13,15.12 13,16.5C13,17.88 11.88,19 10.5,19Z"/>
+        </svg>
+        <span>Musique</span>
+      </div>
+      
+      <!-- Domotique -->
+      <div class="icon-card">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"/>
+        </svg>
+        <span>Domotique</span>
+      </div>
+      
+      <!-- Voyages -->
+      <div class="icon-card">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M21,16V14L13,9V3.5C13,2.67 12.33,2 11.5,2C10.67,2 10,2.67 10,3.5V9L2,14V16L10,13.5V19L8,20.5V22L11.5,21L15,22V20.5L13,19V13.5L21,16Z"/>
+        </svg>
+        <span>Voyages</span>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+  <script>
+    VANTA.NET({
+      el: "#accueil",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x2196F3,
+      backgroundColor: 0xffffff,
+      points: 10.00,
+      maxDistance: 20.00,
+      spacing: 15.00
+    })
+  </script>
+  <script src="script.js"></script>
+
+</body>
+</html>

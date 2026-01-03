@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projets - Loïc CHID'LORD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html" class="logo">
+      <img src="photo.jpg" alt="Loïc CHID'LORD" class="logo-photo">
+      <span style="color: #1a1a1a;">Loïc</span>
+      <span style="color: #2196F3;">CHID'LORD</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="competences.html">Compétences</a></li>
+      <li><a href="projets.html">Projets</a></li>
+      <li><a href="experience.html">Expérience</a></li>
+      <li><a href="interets.html">Centre d'intérêts</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main style="padding-top: 8rem;">
+    <section class="content-section">
+      <!-- En-tête de la page -->
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <h1 style="font-size: 3rem; font-weight: 300; color: #1a1a1a; margin-bottom: 1rem;">Mes Projets</h1>
+        <p style="font-size: 1.1rem; color: #666666; max-width: 700px; margin: 0 auto;">Une sélection de mes réalisations les plus récentes et significatives dans le domaine de l'infrastructure IT et du développement</p>
+      </div>
+
+      <!-- Filtres -->
+      <div style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 4rem; flex-wrap: wrap;">
+        <button class="filter-btn active" onclick="filterProjects('tous')" style="background: #FF6B35; color: white; border: none; padding: 0.75rem 2rem; border-radius: 50px; font-size: 1rem; font-weight: 500; cursor: pointer; transition: all 0.3s;">Tous</button>
+        <button class="filter-btn" onclick="filterProjects('infrastructure')" style="background: white; color: #666; border: 2px solid #e0e0e0; padding: 0.75rem 2rem; border-radius: 50px; font-size: 1rem; font-weight: 500; cursor: pointer; transition: all 0.3s;">Infrastructure IT</button>
+        <button class="filter-btn" onclick="filterProjects('mobile')" style="background: white; color: #666; border: 2px solid #e0e0e0; padding: 0.75rem 2rem; border-radius: 50px; font-size: 1rem; font-weight: 500; cursor: pointer; transition: all 0.3s;">Mobile App</button>
+        <button class="filter-btn" onclick="filterProjects('web')" style="background: white; color: #666; border: 2px solid #e0e0e0; padding: 0.75rem 2rem; border-radius: 50px; font-size: 1rem; font-weight: 500; cursor: pointer; transition: all 0.3s;">Développement Web</button>
+      </div>
+
+      <!-- Grille de projets -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
+        
+        <!-- Projet 1: Homelab -->
+        <div class="project-card" data-category="infrastructure" style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s;">
+          <div style="position: relative; height: 250px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center;">
+            <svg width="80" height="80" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4,1H20A1,1 0 0,1 21,2V6A1,1 0 0,1 20,7H4A1,1 0 0,1 3,6V2A1,1 0 0,1 4,1M4,9H20A1,1 0 0,1 21,10V14A1,1 0 0,1 20,15H4A1,1 0 0,1 3,14V10A1,1 0 0,1 4,9M4,17H20A1,1 0 0,1 21,18V22A1,1 0 0,1 20,23H4A1,1 0 0,1 3,22V18A1,1 0 0,1 4,17M5,3V5H7V3H5M8,3V5H10V3H8M5,11V13H7V11H5M8,11V13H10V11H8M5,19V21H7V19H5M8,19V21H10V19H8Z"/>
+            </svg>
+            <div style="position: absolute; top: 1rem; left: 1rem; background: rgba(255,255,255,0.9); color: #667eea; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Infrastructure IT</div>
+            <div style="position: absolute; top: 1rem; right: 1rem; background: #FF6B35; color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">2024</div>
+          </div>
+          <div style="padding: 1.5rem;">
+            <h3 style="font-size: 1.5rem; font-weight: 600; color: #1a1a1a; margin-bottom: 0.5rem;">Mise en Place Homelab</h3>
+            <p style="font-size: 0.9rem; color: #2196F3; margin-bottom: 1rem;">Projet Personnel • Lab</p>
+            <p style="color: #666; line-height: 1.6; margin-bottom: 1.5rem;">Virtualisation complète d'un micro réseau d'entreprise avec AD, PfSense, Zabbix et postes clients pour simuler un environnement professionnel</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
+              <span style="background: #f0f0f0; padding: 0.4rem 0.8rem; border-radius: 15px; font-size: 0.85rem; color: #666;">VMware</span>
+              <span style="background: #f0f0f0; padding: 0.4rem 0.8rem; border-radius: 15px; font-size: 0.85rem; color: #666;">Active Directory</span>
+              <span style="background: #f0f0f0; padding: 0.4rem 0.8rem; border-radius: 15px; font-size: 0.85rem; color: #666;">PfSense</span>
+              <span style="background: #f0f0f0; padding: 0.4rem 0.8rem; border-radius: 15px; font-size: 0.85rem; color: #666;">Zabbix</span>
+            </div>
+            <a href="#" style="color: #FF6B35; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">Voir le projet →</a>
+          </div>
+        </div>
+
+        <!-- Projet 2: MAPLAN -->
+        <div class="project-card" data-category="web" style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s;">
+          <div style="position: relative; height: 250px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center;">
+            <img src="logomaplan.png" alt="MAPLAN Logo" style="width: 120px; height: 120px; object-fit: contain; border-radius: 20px; background: white; padding: 10px;">
+            <div style="position: absolute; top: 1rem; left: 1rem; background: rgba(255,255,255,0.9); color: #667eea; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Développement Web</div>
+            <div style="position: absolute; top: 1rem; right: 1rem; background: #FF6B35; color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">2025</div>
+          </div>
+          <div style="padding: 1.5rem;">
+            <h3 style="font-size: 1.5rem; font-weight: 600; color: #1a1a1a; margin-bottom: 0.5rem;">MAPLAN</h3>
+            <p style="font-size: 0.9rem; color: #2196F3; margin-bottom: 1rem;">Projet Personnel • Lab</p>
+            <p style="color: #666; line-height: 1.6; margin-bottom: 1.5rem;">Application web de cartographie réseau en temps réel pour visualiser la topologie, les équipements connectés et leur statut</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
+              <span style="background: #f0f0f0; padding: 0.4rem 0.8rem; border-radius: 15px; font-size: 0.85rem; color: #666;">Node.js</span>
+              <span style="background: #f0f0f0; padding: 0.4rem 0.8rem; border-radius: 15px; font-size: 0.85rem; color: #666;">React</span>
+              <span style="background: #f0f0f0; padding: 0.4rem 0.8rem; border-radius: 15px; font-size: 0.85rem; color: #666;">Network Scan</span>
+            </div>
+            <a href="https://github.com/chdlabs/MAPLAN" target="_blank" style="color: #FF6B35; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">Voir le projet →</a>
+          </div>
+        </div>
+
+        <!-- Projet 3: LockMe -->
+        <div class="project-card" data-category="mobile" style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s;">
+          <div style="position: relative; height: 250px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: flex; align-items: center; justify-content: center;">
+            <img src="logolockme.png" alt="LockMe Logo" style="width: 120px; height: 120px; object-fit: contain; border-radius: 20px; background: white; padding: 10px;">
+            <div style="position: absolute; top: 1rem; left: 1rem; background: rgba(255,255,255,0.9); color: #f5576c; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Mobile App</div>
+            <div style="position: absolute; top: 1rem; right: 1rem; background: #FF6B35; color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">2025</div>
+          </div>
+          <div style="padding: 1.5rem;">
+            <h3 style="font-size: 1.5rem; font-weight: 600; color: #1a1a1a; margin-bottom: 0.5rem;">LockMe</h3>
+            <p style="font-size: 0.9rem; color: #2196F3; margin-bottom: 1rem;">Projet Personnel • Sécurité</p>
+            <p style="color: #666; line-height: 1.6; margin-bottom: 1.5rem;">Application permettant de verrouiller un PC à distance via smartphone avec connexion sécurisée et notifications de statut</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
+              <span style="background: #f0f0f0; padding: 0.4rem 0.8rem; border-radius: 15px; font-size: 0.85rem; color: #666;">React Native</span>
+              <span style="background: #f0f0f0; padding: 0.4rem 0.8rem; border-radius: 15px; font-size: 0.85rem; color: #666;">WebSocket</span>
+              <span style="background: #f0f0f0; padding: 0.4rem 0.8rem; border-radius: 15px; font-size: 0.85rem; color: #666;">Security</span>
+            </div>
+            <a href="https://github.com/chdlabs/LockMe-Local" target="_blank" style="color: #FF6B35; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">Voir le projet →</a>
+          </div>
+        </div>
+
+        <!-- Projet 4: LIBUK -->
+        <div class="project-card" data-category="mobile" style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s;">
+          <div style="position: relative; height: 250px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); display: flex; align-items: center; justify-content: center;">
+            <img src="logolibuk.png" alt="LIBUK Logo" style="width: 120px; height: 120px; object-fit: contain; border-radius: 20px; background: white; padding: 10px;">
+            <div style="position: absolute; top: 1rem; left: 1rem; background: rgba(255,255,255,0.9); color: #00f2fe; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Mobile App</div>
+            <div style="position: absolute; top: 1rem; right: 1rem; background: #FF6B35; color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">2025</div>
+          </div>
+          <div style="padding: 1.5rem;">
+            <h3 style="font-size: 1.5rem; font-weight: 600; color: #1a1a1a; margin-bottom: 0.5rem;">LIBUK</h3>
+            <p style="font-size: 0.9rem; color: #2196F3; margin-bottom: 1rem;">Client: App Store • Culture</p>
+            <p style="color: #666; line-height: 1.6; margin-bottom: 1.5rem;">Application mobile iOS native dédiée à la culture, permettant de découvrir et d'explorer du contenu culturel de manière interactive</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
+              <span style="background: #f0f0f0; padding: 0.4rem 0.8rem; border-radius: 15px; font-size: 0.85rem; color: #666;">Swift</span>
+              <span style="background: #f0f0f0; padding: 0.4rem 0.8rem; border-radius: 15px; font-size: 0.85rem; color: #666;">iOS</span>
+              <span style="background: #f0f0f0; padding: 0.4rem 0.8rem; border-radius: 15px; font-size: 0.85rem; color: #666;">App Store</span>
+            </div>
+            <a href="https://apps.apple.com/fr/app/libuk-culture-vili/id6755273508" target="_blank" style="color: #FF6B35; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">Télécharger →</a>
+          </div>
+        </div>
+
+        <!-- Projet 5: My BudgetZen -->
+        <div class="project-card" data-category="mobile" style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s;">
+          <div style="position: relative; height: 250px; background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); display: flex; align-items: center; justify-content: center;">
+            <img src="logobudgetzen.png" alt="My BudgetZen Logo" style="width: 120px; height: 120px; object-fit: contain; border-radius: 20px; background: white; padding: 10px;">
+            <div style="position: absolute; top: 1rem; left: 1rem; background: rgba(255,255,255,0.9); color: #38f9d7; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Mobile App</div>
+            <div style="position: absolute; top: 1rem; right: 1rem; background: #FF6B35; color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">2025</div>
+          </div>
+          <div style="padding: 1.5rem;">
+            <h3 style="font-size: 1.5rem; font-weight: 600; color: #1a1a1a; margin-bottom: 0.5rem;">My BudgetZen</h3>
+            <p style="font-size: 0.9rem; color: #2196F3; margin-bottom: 1rem;">Client: App Store • Finance</p>
+            <p style="color: #666; line-height: 1.6; margin-bottom: 1.5rem;">Application iOS native pour gérer son budget avec visualisation intuitive, rappels intelligents et intégration profonde iOS (Widgets, Notifications)</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
+              <span style="background: #f0f0f0; padding: 0.4rem 0.8rem; border-radius: 15px; font-size: 0.85rem; color: #666;">Swift</span>
+              <span style="background: #f0f0f0; padding: 0.4rem 0.8rem; border-radius: 15px; font-size: 0.85rem; color: #666;">iOS Widgets</span>
+              <span style="background: #f0f0f0; padding: 0.4rem 0.8rem; border-radius: 15px; font-size: 0.85rem; color: #666;">CoreData</span>
+            </div>
+            <a href="https://apps.apple.com/id/app/my-budgetzen/id6756507279" target="_blank" style="color: #FF6B35; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">Télécharger →</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <style>
+    .filter-btn:hover {
+      background: #FF6B35 !important;
+      color: white !important;
+      border-color: #FF6B35 !important;
+    }
+    
+    .filter-btn.active {
+      background: #FF6B35 !important;
+      color: white !important;
+      border-color: #FF6B35 !important;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.15) !important;
+    }
+  </style>
+
+  <script>
+    function filterProjects(category) {
+      const cards = document.querySelectorAll('.project-card');
+      const buttons = document.querySelectorAll('.filter-btn');
+      
+      // Mettre à jour les boutons actifs
+      buttons.forEach(btn => {
+        btn.classList.remove('active');
+      });
+      event.target.classList.add('active');
+      
+      // Filtrer les cartes
+      cards.forEach(card => {
+        if (category === 'tous') {
+          card.style.display = 'block';
+        } else {
+          if (card.getAttribute('data-category') === category) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        }
+      });
+    }
+  </script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
