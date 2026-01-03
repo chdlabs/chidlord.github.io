@@ -18,13 +18,18 @@
       <span style="color: #1a1a1a;">Loïc</span>
       <span style="color: #2196F3;">CHID'LORD</span>
     </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="about.html">À propos</a></li>
-      <li><a href="competences.html">Compétences</a></li>
-      <li><a href="projets.html">Projets</a></li>
-      <li><a href="experience.html">Expérience</a></li>
-      <li><a href="interets.html">Centre d'intérêts</a></li>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" onclick="closeMenu()">Accueil</a></li>
+      <li><a href="about.html" onclick="closeMenu()">À propos</a></li>
+      <li><a href="competences.html" onclick="closeMenu()">Compétences</a></li>
+      <li><a href="projets.html" onclick="closeMenu()">Projets</a></li>
+      <li><a href="experience.html" onclick="closeMenu()">Expérience</a></li>
+      <li><a href="interets.html" onclick="closeMenu()">Centre d'intérêts</a></li>
     </ul>
   </nav>
 
@@ -106,6 +111,17 @@
       maxDistance: 20.00,
       spacing: 15.00
     })
+  </script>
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+    }
+
+    function closeMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.remove('active');
+    }
   </script>
   <script src="script.js"></script>
 
