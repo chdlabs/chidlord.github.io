@@ -19,6 +19,7 @@
 - Communication
 - Capacité d'adaptation
 - Autonomie
+Gestion du stresse
 
 ---
 
@@ -78,12 +79,40 @@
 
 ## HARD SKILLS
 
-- PowerShell, Bash/Shell scripting
-- Admin. de Windows Server
-- Configuration routeurs/switches
-- Cloud computing (AWS, Azure)
-- Virtualization (Hyper-V, VMware)
-- Supervision et Monitoring
+Compétences en Systèmes d'Exploitation
+
+Administration Windows Server (Active Directory, GPO, DNS, DHCP)
+Administration Linux (Ubuntu, CentOS/Red Hat, commandes Bash)
+Gestion de serveurs physiques et virtuels
+
+Compétences en Virtualisation et Cloud
+
+Virtualisation : VMware vSphere, Hyper-V, Proxmox
+Cloud Computing : AWS (EC2, S3, VPC), Microsoft Azure, Google Cloud Platform
+Migration et gestion hybride (on-premise vers cloud)
+Infrastructure as Code (IaC) : Terraform, Ansible, CloudFormation
+
+Compétences Réseaux
+
+Protocoles fondamentaux : TCP/IP, VLAN, VPN, LAN/WAN
+Équipements : Routeurs/Switchs Cisco, Firewalls (pfSense, Fortigate)
+Configuration et sécurisation réseau (QoS, SD-WAN)
+
+Compétences en Sécurité et Sauvegardes
+
+Sécurité informatique : Firewalls, IDS/IPS, antivirus, gestion des vulnérabilités
+Sauvegardes et restauration : Veeam, Acronis
+Cybersécurité cloud (IAM, encryption, Zero Trust)
+
+Compétences en Scripting et Automatisation
+
+Langages : PowerShell, Bash, Python
+Automatisation des tâches (déploiement, monitoring)
+
+Compétences en Supervision et Outils
+
+Outils de monitoring : Nagios, Zabbix, Prometheus
+
 
 ---
 

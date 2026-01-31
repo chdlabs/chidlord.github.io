@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My BudgetZen - Aperçu Détaillé</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .hero-app {
+      background: linear-gradient(135deg, #7FB69E 0%, #9BC8B2 100%);
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10rem 5% 5rem 5%;
+      position: relative;
+    }
+    
+    .app-hero-content {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .app-logo-large {
+      width: 150px;
+      height: 150px;
+      border-radius: 30px;
+      margin-bottom: 2rem;
+      background: white;
+      padding: 15px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    }
+    
+    .app-section {
+      padding: 4rem 5%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .screenshots-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+    
+    .screenshot-placeholder {
+      aspect-ratio: 9/19.5;
+      background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+      border-radius: 30px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #999;
+      font-size: 0.9rem;
+      border: 2px solid #ddd;
+      transition: transform 0.3s;
+    }
+    
+    .screenshot-placeholder:hover {
+      transform: translateY(-10px);
+    }
+    
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+    
+    .feature-card {
+      background: white;
+      border: 1px solid #e0e0e0;
+      border-radius: 20px;
+      padding: 2rem;
+      transition: all 0.3s;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    .feature-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #43e97b, #38f9d7);
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+    }
+    
+    .tech-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #43e97b, #38f9d7);
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 25px;
+      margin: 0.5rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    
+    .download-section {
+      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+      padding: 4rem 5%;
+      text-align: center;
+      border-radius: 30px;
+      margin: 3rem 0;
+    }
+    
+    .btn-primary {
+      display: inline-block;
+      background: linear-gradient(135deg, #43e97b, #38f9d7);
+      color: white;
+      padding: 1rem 3rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin: 1rem 0.5rem;
+      transition: all 0.3s;
+      box-shadow: 0 10px 30px rgba(67, 233, 123, 0.3);
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(67, 233, 123, 0.4);
+    }
+    
+    .btn-secondary {
+      display: inline-block;
+      background: white;
+      color: #43e97b;
+      padding: 1rem 3rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin: 1rem 0.5rem;
+      border: 2px solid #43e97b;
+      transition: all 0.3s;
+    }
+    
+    .btn-secondary:hover {
+      background: #43e97b;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html" class="logo">
+      <img src="photo.jpg" alt="Loïc CHID'LORD" class="logo-photo">
+      <span style="color: #1a1a1a;">Loïc</span>
+      <span style="color: #2196F3;">CHID'LORD</span>
+    </a>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" onclick="closeMenu()">Accueil</a></li>
+      <li><a href="about.html" onclick="closeMenu()">À propos</a></li>
+      <li><a href="competences.html" onclick="closeMenu()">Compétences</a></li>
+      <li><a href="projets.html" onclick="closeMenu()">Projets</a></li>
+      <li><a href="experience.html" onclick="closeMenu()">Expérience</a></li>
+      <li><a href="interets.html" onclick="closeMenu()">Centre d'intérêts</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-app">
+    <div class="app-hero-content">
+      <img src="logobudgetzen.png" alt="My BudgetZen Logo" class="app-logo-large">
+      <h1 style="font-size: 3.5rem; font-weight: 800; color: white; margin-bottom: 1rem;">My BudgetZen</h1>
+      <p style="font-size: 1.4rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem; line-height: 1.6; font-weight: 600;">Gérez votre budget en toute sérénité 🧘‍♂️💰</p>
+      <p style="font-size: 1.1rem; color: rgba(255,255,255,0.9); margin-bottom: 2rem;">Vos finances, en paix • Budget zen, esprit tranquille</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <span style="background: rgba(255,255,255,0.2); backdrop-filter: blur(10px); color: white; padding: 0.5rem 1.5rem; border-radius: 25px; font-weight: 600;">iOS 17+</span>
+        <span style="background: rgba(255,255,255,0.2); backdrop-filter: blur(10px); color: white; padding: 0.5rem 1.5rem; border-radius: 25px; font-weight: 600;">iPhone & iPad</span>
+        <span style="background: rgba(255,255,255,0.2); backdrop-filter: blur(10px); color: white; padding: 0.5rem 1.5rem; border-radius: 25px; font-weight: 600;">Achat unique 2,99€</span>
+        <span style="background: rgba(255,255,255,0.2); backdrop-filter: blur(10px); color: white; padding: 0.5rem 1.5rem; border-radius: 25px; font-weight: 600;">Sans abonnement</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overview Section -->
+  <section class="app-section">
+    <div style="text-align: center; margin-bottom: 3rem;">
+      <h2 style="font-size: 2.5rem; font-weight: 700; color: #1a1a1a; margin-bottom: 1rem;">Philosophie et positionnement</h2>
+      <p style="font-size: 1.1rem; color: #666; max-width: 900px; margin: 0 auto 1.5rem; line-height: 1.8;">
+        My BudgetZen est une application mobile iOS de gestion de budget personnel, développée par <strong>Genesis Labs</strong> (développeur indépendant congolais, Loïc CHID'LORD). 
+        Lancée le <strong>20 décembre 2025</strong> sur l'App Store, elle est disponible en achat unique à <strong>2,99 €</strong> (sans abonnement ni achats in-app supplémentaires).
+      </p>
+      <p style="font-size: 1.1rem; color: #666; max-width: 900px; margin: 0 auto; line-height: 1.8;">
+        My BudgetZen adopte une approche <strong>minimaliste et apaisante</strong> de la finance personnelle, en opposition aux applications souvent complexes, intrusives ou basées sur des abonnements. 
+        Un outil zen, simple et respectueux de la vie privée : <strong>sans publicité, sans tracking et sans dépendance au cloud</strong>.
+      </p>
+    </div>
+
+    <!-- Public cible -->
+    <div style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 3rem; border-radius: 20px; margin-top: 3rem;">
+      <h3 style="font-size: 1.8rem; font-weight: 700; color: #1a1a1a; margin-bottom: 2rem; text-align: center;">Public cible</h3>
+      <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; max-width: 1200px; margin: 0 auto;">
+        <div style="background: white; padding: 1.2rem; border-radius: 15px; text-align: center;">
+          <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">🎓</div>
+          <strong style="color: #1a1a1a; font-size: 0.9rem; display: block;">Jeunes actifs & étudiants</strong>
+        </div>
+        <div style="background: white; padding: 1.2rem; border-radius: 15px; text-align: center;">
+          <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">👥</div>
+          <strong style="color: #1a1a1a; font-size: 0.9rem; display: block;">Couples & colocataires</strong>
+        </div>
+        <div style="background: white; padding: 1.2rem; border-radius: 15px; text-align: center;">
+          <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">👨‍👩‍👧‍👦</div>
+          <strong style="color: #1a1a1a; font-size: 0.9rem; display: block;">Familles</strong>
+        </div>
+        <div style="background: white; padding: 1.2rem; border-radius: 15px; text-align: center;">
+          <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">🔒</div>
+          <strong style="color: #1a1a1a; font-size: 0.9rem; display: block;">Soucieux de confidentialité</strong>
+        </div>
+        <div style="background: white; padding: 1.2rem; border-radius: 15px; text-align: center;">
+          <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">🧘‍♂️</div>
+          <strong style="color: #1a1a1a; font-size: 0.9rem; display: block;">Utilisateurs minimalistes</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshots Section -->
+  <section class="app-section" style="background: #f8f9fa; margin: 0; max-width: 100%; padding: 4rem 5%;">
+    <h3 style="font-size: 2rem; font-weight: 700; color: #1a1a1a; margin-bottom: 2rem; text-align: center;">Captures d'écran</h3>
+    <div class="screenshots-grid">
+      <img src="Accueil.png" alt="Écran d'accueil My BudgetZen" style="aspect-ratio: 9/19.5; width: 100%; border-radius: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.15); object-fit: cover;">
+      <img src="Budget.png" alt="Gestion des budgets" style="aspect-ratio: 9/19.5; width: 100%; border-radius: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.15); object-fit: cover;">
+      <img src="Rapports.png" alt="Rapports et statistiques" style="aspect-ratio: 9/19.5; width: 100%; border-radius: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.15); object-fit: cover;">
+      <img src="Abonnements.png" alt="Gestion des abonnements" style="aspect-ratio: 9/19.5; width: 100%; border-radius: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.15); object-fit: cover;">
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="app-section" style="background: white; margin: 0; max-width: 100%; padding: 4rem 5%;">
+    <h3 style="font-size: 2.5rem; font-weight: 700; color: #1a1a1a; margin-bottom: 3rem; text-align: center;">Fonctionnalités principales</h3>
+    
+    <!-- Architecture -->
+    <div style="background: white; padding: 2rem; border-radius: 20px; margin-bottom: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+      <p style="color: #666; font-size: 1rem; text-align: center; line-height: 1.6;">
+        Développée nativement avec <strong>SwiftUI (iOS 17+)</strong>, <strong>Swift Charts</strong> pour les graphiques, et architecture <strong>MVVM</strong>.
+      </p>
+    </div>
+
+    <div class="feature-grid">
+      <!-- Gestion quotidienne -->
+      <div class="feature-card">
+        <div class="feature-icon">💰</div>
+        <h4 style="font-size: 1.3rem; font-weight: 600; color: #1a1a1a; margin-bottom: 1rem;">Gestion quotidienne des finances</h4>
+        <ul style="list-style: none; padding: 0; color: #666; line-height: 1.8;">
+          <li style="padding: 0.3rem 0;">• Transactions illimitées (dépenses/revenus)</li>
+          <li style="padding: 0.3rem 0;">• Bouton flottant rapide</li>
+          <li style="padding: 0.3rem 0;">• 13 catégories personnalisables (icônes, couleurs)</li>
+          <li style="padding: 0.3rem 0;">• Organisation chronologique</li>
+          <li style="padding: 0.3rem 0;">• Recherche et filtrage intuitifs</li>
+        </ul>
+      </div>
+      
+      <!-- Budgets -->
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h4 style="font-size: 1.3rem; font-weight: 600; color: #1a1a1a; margin-bottom: 1rem;">Budgets et suivi intelligent</h4>
+        <ul style="list-style: none; padding: 0; color: #666; line-height: 1.8;">
+          <li style="padding: 0.3rem 0;">• Budgets mensuels par catégorie</li>
+          <li style="padding: 0.3rem 0;">• Limites avec progression visuelle</li>
+          <li style="padding: 0.3rem 0;">• Barres vert/orange/rouge</li>
+          <li style="padding: 0.3rem 0;">• Alertes automatiques à 80% et 100%</li>
+          <li style="padding: 0.3rem 0;">• Gestion des charges fixes</li>
+          <li style="padding: 0.3rem 0;">• Échéancier automatique</li>
+        </ul>
+      </div>
+      
+      <!-- Dettes -->
+      <div class="feature-card">
+        <div class="feature-icon">💳</div>
+        <h4 style="font-size: 1.3rem; font-weight: 600; color: #1a1a1a; margin-bottom: 1rem;">Gestion des dettes et remboursements</h4>
+        <ul style="list-style: none; padding: 0; color: #666; line-height: 1.8;">
+          <li style="padding: 0.3rem 0;">• Suivi intégré via charges fixes</li>
+          <li style="padding: 0.3rem 0;">• Planification automatique</li>
+          <li style="padding: 0.3rem 0;">• Intégration dans les budgets catégories</li>
+          <li style="padding: 0.3rem 0;">• Visualisation dans les graphiques</li>
+          <li style="padding: 0.3rem 0;">• Objectifs d'épargne pour accélérer</li>
+          <li style="padding: 0.3rem 0;">• Export données dettes (PDF/CSV/JSON)</li>
+        </ul>
+      </div>
+      
+      <!-- Visualisations -->
+      <div class="feature-card">
+        <div class="feature-icon">📈</div>
+        <h4 style="font-size: 1.3rem; font-weight: 600; color: #1a1a1a; margin-bottom: 1rem;">Visualisations et analyses</h4>
+        <ul style="list-style: none; padding: 0; color: #666; line-height: 1.8;">
+          <li style="padding: 0.3rem 0;">• Graphiques interactifs (donut, barres, courbes)</li>
+          <li style="padding: 0.3rem 0;">• Comparatifs revenus/dépenses</li>
+          <li style="padding: 0.3rem 0;">• Rapports mensuels détaillés</li>
+          <li style="padding: 0.3rem 0;">• Export complet : PDF, CSV, JSON</li>
+          <li style="padding: 0.3rem 0;">• Sauvegarde/restauration locale</li>
+        </ul>
+      </div>
+      
+      <!-- Objectifs -->
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <h4 style="font-size: 1.3rem; font-weight: 600; color: #1a1a1a; margin-bottom: 1rem;">Objectifs d'épargne</h4>
+        <ul style="list-style: none; padding: 0; color: #666; line-height: 1.8;">
+          <li style="padding: 0.3rem 0;">• Objectifs personnalisés (nom, montant)</li>
+          <li style="padding: 0.3rem 0;">• 20 icônes SF Symbols</li>
+          <li style="padding: 0.3rem 0;">• Barres circulaires animées</li>
+          <li style="padding: 0.3rem 0;">• Statuts (Actif/Complété/Archivé)</li>
+          <li style="padding: 0.3rem 0;">• Priorité remboursement dettes</li>
+        </ul>
+      </div>
+      
+      <!-- Dépenses partagées -->
+      <div class="feature-card">
+        <div class="feature-icon">👥</div>
+        <h4 style="font-size: 1.3rem; font-weight: 600; color: #1a1a1a; margin-bottom: 1rem;">Dépenses partagées</h4>
+        <ul style="list-style: none; padding: 0; color: #666; line-height: 1.8;">
+          <li style="padding: 0.3rem 0;">• Gestion des dépenses communes</li>
+          <li style="padding: 0.3rem 0;">• Calcul automatique des parts</li>
+          <li style="padding: 0.3rem 0;">• Suivi des états (Payé/Complété)</li>
+          <li style="padding: 0.3rem 0;">• Statistiques détaillées</li>
+          <li style="padding: 0.3rem 0;">• Dettes interpersonnelles</li>
+        </ul>
+      </div>
+      
+      <!-- Sécurité -->
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h4 style="font-size: 1.3rem; font-weight: 600; color: #1a1a1a; margin-bottom: 1rem;">Sécurité et confidentialité</h4>
+        <ul style="list-style: none; padding: 0; color: #666; line-height: 1.8;">
+          <li style="padding: 0.3rem 0;">• Code PIN 4 chiffres</li>
+          <li style="padding: 0.3rem 0;">• Verrouillage auto (2 min)</li>
+          <li style="padding: 0.3rem 0;">• 100% local (UserDefaults)</li>
+          <li style="padding: 0.3rem 0;">• Zéro cloud, zéro tracking, zéro pub</li>
+          <li style="padding: 0.3rem 0;">• Permissions minimales</li>
+        </ul>
+      </div>
+      
+      <!-- Design -->
+      <div class="feature-card">
+        <div class="feature-icon">🎨</div>
+        <h4 style="font-size: 1.3rem; font-weight: 600; color: #1a1a1a; margin-bottom: 1rem;">Design et personnalisation</h4>
+        <ul style="list-style: none; padding: 0; color: #666; line-height: 1.8;">
+          <li style="padding: 0.3rem 0;">• Palette zen : indigo, vert sauge, coral</li>
+          <li style="padding: 0.3rem 0;">• Mode sombre automatique</li>
+          <li style="padding: 0.3rem 0;">• SF Pro Rounded</li>
+          <li style="padding: 0.3rem 0;">• Animations fluides</li>
+          <li style="padding: 0.3rem 0;">• Accueil personnalisé</li>
+          <li style="padding: 0.3rem 0;">• Support de 5 devises</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Differentiation Section -->
+  <section class="app-section">
+    <h3 style="font-size: 2.5rem; font-weight: 700; color: #1a1a1a; margin-bottom: 3rem; text-align: center;">Ce qui rend My BudgetZen unique</h3>
+    
+    <div style="overflow-x: auto; margin: 0 auto; max-width: 1000px;">
+      <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+        <thead>
+          <tr style="background: linear-gradient(135deg, #7FB69E, #9BC8B2);">
+            <th style="padding: 1.5rem; text-align: left; color: white; font-weight: 700; font-size: 1.1rem;">Critère</th>
+            <th style="padding: 1.5rem; text-align: left; color: white; font-weight: 700; font-size: 1.1rem;">My BudgetZen</th>
+            <th style="padding: 1.5rem; text-align: left; color: white; font-weight: 700; font-size: 1.1rem;">Concurrents typiques</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid #f0f0f0;">
+            <td style="padding: 1.2rem; font-weight: 600; color: #1a1a1a;">💰 Prix</td>
+            <td style="padding: 1.2rem; color: #7FB69E; font-weight: 600;">Achat unique 2,99 € (sans abonnement)</td>
+            <td style="padding: 1.2rem; color: #666;">Freemium / abonnement</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #f0f0f0; background: #f9f9f9;">
+            <td style="padding: 1.2rem; font-weight: 600; color: #1a1a1a;">💾 Stockage</td>
+            <td style="padding: 1.2rem; color: #7FB69E; font-weight: 600;">100% local</td>
+            <td style="padding: 1.2rem; color: #666;">Cloud souvent obligatoire</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #f0f0f0;">
+            <td style="padding: 1.2rem; font-weight: 600; color: #1a1a1a;">🔒 Tracking / Pub</td>
+            <td style="padding: 1.2rem; color: #7FB69E; font-weight: 600;">Aucun</td>
+            <td style="padding: 1.2rem; color: #666;">Fréquent</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #f0f0f0; background: #f9f9f9;">
+            <td style="padding: 1.2rem; font-weight: 600; color: #1a1a1a;">💳 Gestion dettes</td>
+            <td style="padding: 1.2rem; color: #7FB69E; font-weight: 600;">Intégrée via échéancier/budgets</td>
+            <td style="padding: 1.2rem; color: #666;">Souvent module dédié ou payant</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #f0f0f0;">
+            <td style="padding: 1.2rem; font-weight: 600; color: #1a1a1a;">🎨 Design</td>
+            <td style="padding: 1.2rem; color: #7FB69E; font-weight: 600;">Zen, minimaliste</td>
+            <td style="padding: 1.2rem; color: #666;">Plus chargé</td>
+          </tr>
+          <tr style="background: #f9f9f9;">
+            <td style="padding: 1.2rem; font-weight: 600; color: #1a1a1a;">📤 Export / Backup</td>
+            <td style="padding: 1.2rem; color: #7FB69E; font-weight: 600;">PDF/CSV/JSON complet</td>
+            <td style="padding: 1.2rem; color: #666;">Limité ou cloud</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p style="text-align: center; color: #666; margin-top: 2rem; font-style: italic; max-width: 800px; margin-left: auto; margin-right: auto;">
+      My BudgetZen se distingue par son équilibre entre fonctionnalités essentielles (y compris gestion dettes via échéancier et budgets), 
+      simplicité zen et respect total de la privacy, en faisant une alternative éthique et accessible aux outils de finance personnelle.
+    </p>
+  </section>
+
+  <!-- Development Process -->
+  <section class="app-section" style="background: #f8f9fa; margin: 0; max-width: 100%; padding: 4rem 5%;">
+    <h3 style="font-size: 2.5rem; font-weight: 700; color: #1a1a1a; margin-bottom: 2rem; text-align: center;">Développement et roadmap</h3>
+    
+    <!-- Stats -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+      <div style="background: linear-gradient(135deg, #43e97b, #38f9d7); padding: 2rem; border-radius: 20px; text-align: center; color: white;">
+        <div style="font-size: 3rem; font-weight: 800; margin-bottom: 0.5rem;">~7500</div>
+        <div style="font-size: 1rem; opacity: 0.95;">Lignes de code Swift</div>
+      </div>
+      <div style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 2rem; border-radius: 20px; text-align: center; color: white;">
+        <div style="font-size: 3rem; font-weight: 800; margin-bottom: 0.5rem;">5</div>
+        <div style="font-size: 1rem; opacity: 0.95;">Modèles principaux</div>
+      </div>
+      <div style="background: linear-gradient(135deg, #f093fb, #f5576c); padding: 2rem; border-radius: 20px; text-align: center; color: white;">
+        <div style="font-size: 3rem; font-weight: 800; margin-bottom: 0.5rem;">30+</div>
+        <div style="font-size: 1rem; opacity: 0.95;">Composants UI</div>
+      </div>
+    </div>
+
+    <!-- Roadmap 2026 -->
+    <div style="background: white; border-radius: 20px; padding: 3rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+      <h4 style="font-size: 1.8rem; font-weight: 700; color: #1a1a1a; margin-bottom: 2rem; text-align: center;">Roadmap 2026 🚀</h4>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+        <div style="padding: 1rem; border-left: 4px solid #43e97b; background: #f9f9f9; border-radius: 10px;">
+          <strong style="color: #1a1a1a;">🔐 Face ID</strong>
+          <p style="color: #666; font-size: 0.9rem; margin-top: 0.5rem;">Authentification biométrique</p>
+        </div>
+        <div style="padding: 1rem; border-left: 4px solid #43e97b; background: #f9f9f9; border-radius: 10px;">
+          <strong style="color: #1a1a1a;">📱 Widgets</strong>
+          <p style="color: #666; font-size: 0.9rem; margin-top: 0.5rem;">Widgets écran d'accueil</p>
+        </div>
+        <div style="padding: 1rem; border-left: 4px solid #43e97b; background: #f9f9f9; border-radius: 10px;">
+          <strong style="color: #1a1a1a;">📥 Import CSV</strong>
+          <p style="color: #666; font-size: 0.9rem; margin-top: 0.5rem;">Import depuis banques</p>
+        </div>
+        <div style="padding: 1rem; border-left: 4px solid #43e97b; background: #f9f9f9; border-radius: 10px;">
+          <strong style="color: #1a1a1a;">☁️ iCloud (optionnel)</strong>
+          <p style="color: #666; font-size: 0.9rem; margin-top: 0.5rem;">Sync multi-appareils</p>
+        </div>
+        <div style="padding: 1rem; border-left: 4px solid #43e97b; background: #f9f9f9; border-radius: 10px;">
+          <strong style="color: #1a1a1a;">⌚ Apple Watch</strong>
+          <p style="color: #666; font-size: 0.9rem; margin-top: 0.5rem;">Suivi au poignet</p>
+        </div>
+        <div style="padding: 1rem; border-left: 4px solid #43e97b; background: #f9f9f9; border-radius: 10px;">
+          <strong style="color: #1a1a1a;">🤖 ML Prédictions</strong>
+          <p style="color: #666; font-size: 0.9rem; margin-top: 0.5rem;">Prévisions intelligentes</p>
+        </div>
+        <div style="padding: 1rem; border-left: 4px solid #43e97b; background: #f9f9f9; border-radius: 10px;">
+          <strong style="color: #1a1a1a;">📸 Scan OCR</strong>
+          <p style="color: #666; font-size: 0.9rem; margin-top: 0.5rem;">Tickets de caisse</p>
+        </div>
+        <div style="padding: 1rem; border-left: 4px solid #43e97b; background: #f9f9f9; border-radius: 10px;">
+          <strong style="color: #1a1a1a;">📊 Module investissements</strong>
+          <p style="color: #666; font-size: 0.9rem; margin-top: 0.5rem;">Suivi portefeuille</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download Section -->
+  <section class="app-section" style="background: #f8f9fa; margin: 0; max-width: 100%; padding: 4rem 5%;">
+    <div class="download-section">
+      <h3 style="font-size: 2.5rem; font-weight: 700; color: #1a1a1a; margin-bottom: 1rem;">Disponibilité et réception</h3>
+      <p style="font-size: 1.1rem; color: #666; margin-bottom: 0.5rem; line-height: 1.6;">
+        <strong>App Store depuis décembre 2025</strong><br/>
+        ID App Store : <code style="background: rgba(67, 233, 123, 0.1); padding: 0.3rem 0.6rem; border-radius: 5px; font-family: monospace;">6756507279</code><br/>
+        Compatible iPhone et iPad • Mises à jour régulières
+      </p>
+      
+      <div style="margin: 2rem 0; padding: 2rem; background: white; border-radius: 15px; max-width: 600px; margin-left: auto; margin-right: auto;">
+        <h4 style="font-size: 1.2rem; font-weight: 600; color: #1a1a1a; margin-bottom: 1rem;">📧 Contact & Support</h4>
+        <p style="color: #666; margin-bottom: 0.5rem;">
+          Email : <a href="mailto:contact@genesislabs.fr" style="color: #43e97b; text-decoration: none; font-weight: 600;">contact@genesislabs.fr</a>
+        </p>
+        <p style="color: #666; margin-bottom: 0.5rem;">
+          Site web : <a href="https://genesislabs.fr" target="_blank" style="color: #43e97b; text-decoration: none; font-weight: 600;">genesislabs.fr</a>
+        </p>
+        <p style="color: #999; font-size: 0.9rem; margin-top: 1rem;">
+          Politique de confidentialité incluse sur le site
+        </p>
+      </div>
+
+      <div style="margin-top: 2rem;">
+        <a href="https://apps.apple.com/id/app/my-budgetzen/id6756507279" target="_blank" class="btn-primary">
+          📲 Télécharger sur l'App Store
+        </a>
+        <a href="projets.html" class="btn-secondary">
+          ← Retour aux projets
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+    }
+
+    function closeMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.remove('active');
+    }
+  </script>
+  <script src="script.js"></script>
+
+</body>
+</html>
